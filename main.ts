@@ -17,15 +17,14 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
  * Dice Roller
  */
 game.splash("You have reset")
-//% color="#03AA74" icon="\u2684"
-//% block="Dice"
+// % color="#ad4800" icon="\u2684" % block="Dice"
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
      */
     //% BlockId=wowie Block="Roll a D6 $Times Times"
     //% group="Preset" weight=91
-    export function Roll(Times: number): number {
+    export function RollD6(Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
             Sum = Sum + Math.randomRange(1, 6)
@@ -41,6 +40,6 @@ namespace RollingDice {
     //% block="read setting $name as number"
     //% weight=90 group="Custom"
     export function readNumber(Timmi: number) {
-        return RollingDice.Roll(Timmi);
+        return RollingDice.RollD6(Timmi);
     }
 }
