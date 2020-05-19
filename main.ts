@@ -18,7 +18,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
  */
 game.splash("You have reset")
 // % color="#03AA74" weight=86 icon="\uf020"
-// block="Dice" % groups='["Custom", "Preset"]'
+// block="Dice" % groups='["Preset"]'
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
