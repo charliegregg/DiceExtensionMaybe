@@ -17,14 +17,14 @@ game.splash("You have reset")
 /*
     Dice Roller
 */
-//% color="#03AA74" weight=2 icon="\uf021" block="Dice"
+//% color="#03AA74" weight=86 icon="\uf020" block="Dice"
 //% groups='["Custom", "Preset"]'
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
      */
     //% BlockId=wowie Block="Roll a D6 $Times Times"
-    export function Roll(Times: number): number {
+    export function Roller(Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
             Sum = Sum + Math.randomRange(1, 6)
