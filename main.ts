@@ -11,11 +11,10 @@ enum Dice {
     D20 = 20,
     D100 = 100
 }
-//% color="#ad4800" icon="\u2684" block="Dice"
-//% weight=42
+//% color="#ad4800" icon="\u2684" block="Dice" weight=42
 namespace RollingDice {
     /** Rolls a D6
-     * @param Times
+     * @param Times    The times to roll
      */
     //% blockId=wowie block="Roll a D6 $Times times"
     //% group="Preset" weight=91
@@ -27,12 +26,11 @@ namespace RollingDice {
         return(Sum)
     }
     /**
-     * Read named setting as a number.
+     * Roll a custom die.
      * @param Times   The times to roll
+     * @param Sides . The Sides of a dice
      */
-    // %blockId=wowie2
-    // %block="Roll a $Sides $Times times"
-    // %weight=90 group="Custom"
+    //% blockId=wowie2 block="Roll a $Sides $Times times" weight=90 group="Custom"
     export function RollCustom(Times: number, Sides: Dice): number {
         let Sum2 = 0
         for (let index2 = 0; index2 < Times; index2++) {
