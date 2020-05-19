@@ -33,7 +33,7 @@ namespace RollingDice {
     //% blockId=wowie2
     //% block="Roll a $Sides $Times times"
     //% weight=90 group="Custom"
-    export function RollWithStyle(Times: number, Sides: Dice): number {
+    export function RollCustom(Times: number, Sides: Dice): number {
         let Sum2 = 0
         for (let index2 = 0; index2 < Times; index2++) {
             Sum2 = Sum2 + Math.randomRange(1, Sides)
@@ -41,4 +41,4 @@ namespace RollingDice {
         return (Sum2)
     }
 }
-game.splash(convertToText(RollingDice.RollWithStyle(1, Dice.D20)))
+game.splash(convertToText(RollingDice.RollCustom(1, Dice.D20)))
