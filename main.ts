@@ -17,7 +17,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
  * Dice Roller
  */
 game.splash("You have reset")
-// % color="#ad4800" icon="\u2684" % block="Dice"
+// % color="#ad4800" icon="\u2684" block="Dice"
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
