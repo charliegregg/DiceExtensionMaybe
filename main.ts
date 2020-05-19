@@ -16,7 +16,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 /**
  * Dice Roller
  */
-// % color="#ad4800" icon="\u2684" block="Dice"
+//% color="#ad4800" icon="\u2684" block="Dice"
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
@@ -37,7 +37,7 @@ namespace RollingDice {
     //% blockId=wowie2
     //% block="Roll a D6 $Timmi with style..."
     //% weight=90 group="Custom"
-    export function readNumber(Timmi: number) {
+    export function RollWithStyle(Timmi: number) {
         return RollingDice.RollD6(Timmi);
     }
 }
