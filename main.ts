@@ -1,3 +1,6 @@
+/**
+ * Dice Roller
+ */
 enum Dice {
     D2 = 2,
     D4 = 4,
@@ -8,15 +11,13 @@ enum Dice {
     D20 = 20,
     D100 = 100
 }
-/**
- * Dice Roller
- */
-//%color="#ad4800" icon="\u2684" block="Dice" weight=42
+// %color="#ad4800" icon="\u2684" block="Dice"
+// weight=42
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
      */
-    //% blockId=wowie block="Roll a D6 $Times Times"
+    //% blockId=wowie block="Roll a D6 $Times times"
     //% group="Preset" weight=91
     export function RollD6(Times: number): number {
         let Sum = 0
@@ -30,13 +31,14 @@ namespace RollingDice {
      * @param Times   The times to roll
      */
     //% blockId=wowie2
-    //% block="Roll a D6 $Times with a $Sides"
+    //% block="Roll a $Sides $Times times"
     //% weight=90 group="Custom"
     export function RollWithStyle(Times: number, Sides: Dice): number {
-        let Sum = 0
-        for (let index = 0; index < Times; index++) {
-            Sum = Sum + Math.randomRange(1, Sides)
+        let Sum2 = 0
+        for (let index2 = 0; index2 < Times; index2++) {
+            Sum2 = Sum2 + Math.randomRange(1, Sides)
         }
-        return (Sum)
+        return (Sum2)
     }
 }
+game.splash(convertToText(RollingDice.RollWithStyle(1, Dice.D20)))
