@@ -16,13 +16,12 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 /**
  * Dice Roller
  */
-game.splash("You have reset")
 // % color="#ad4800" icon="\u2684" block="Dice"
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
      */
-    //% BlockId=wowie Block="Roll a D6 $Times Times"
+    //% blockId=wowie block="Roll a D6 $Times Times"
     //% group="Preset" weight=91
     export function RollD6(Times: number): number {
         let Sum = 0
