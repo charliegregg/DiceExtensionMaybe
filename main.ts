@@ -13,17 +13,18 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.writeString("hello", "up")
 })
+/**
+ * Dice Roller
+ */
 game.splash("You have reset")
-/*
-    Dice Roller
-*/
-//% color="#03AA74" weight=86 icon="\uf020" block="Dice"
-//% groups='["Custom", "Preset"]'
+// % color="#03AA74" weight=86 icon="\uf020"
+// block="Dice" % groups='["Custom", "Preset"]'
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
      */
     //% BlockId=wowie Block="Roll a D6 $Times Times"
+    //% group="Preset"
     export function Roller(Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
