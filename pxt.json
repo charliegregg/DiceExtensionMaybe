@@ -3,8 +3,7 @@
     "dependencies": {
         "device": "*",
         "animation": "*",
-        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
-        "wowie": "github:charliegregg/diceextensionmaybe#master"
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "description": "",
     "icon": "./static/libs/tropic.png",
