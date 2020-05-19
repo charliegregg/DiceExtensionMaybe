@@ -24,12 +24,23 @@ namespace RollingDice {
      * @param Times
      */
     //% BlockId=wowie Block="Roll a D6 $Times Times"
-    //% group="Preset"
+    //% group="Preset" weight=91
     export function Roll(Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
             Sum = Sum + Math.randomRange(1, 6)
         }
         return(Sum)
+    }
+    /**
+     * Read named setting as a number.
+     * 
+     * @param name   The name of the setting to read
+     */
+    //% blockId=block_settings_read_number
+    //% block="read setting $name as number"
+    //% weight=90 group="Custom"
+    export function readNumber(Timmi: number) {
+        return RollingDice.Roll(Timmi);
     }
 }
