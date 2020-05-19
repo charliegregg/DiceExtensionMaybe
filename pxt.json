@@ -2,16 +2,9 @@
     "name": "wowie",
     "dependencies": {
         "device": "*",
-        "controller": "*",
-        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24",
-        "corgio": "*",
         "animation": "*",
-        "storyboard": "*",
-        "darts": "*",
-        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.0.5",
-        "keyboard": "*",
-        "mouse": "*",
-        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
+        "wowie": "github:charliegregg/diceextensionmaybe#master"
     },
     "description": "",
     "icon": "./static/libs/tropic.png",
