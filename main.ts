@@ -1,22 +1,17 @@
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    blockSettings.writeString("hello", "left")
-})
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    blockSettings.writeString("hello", "down")
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    game.splash(blockSettings.readString("hello"))
-})
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    blockSettings.writeString("hello", "right")
-})
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    blockSettings.writeString("hello", "up")
-})
+enum Dice {
+    D2 = 2,
+    D4 = 4,
+    D6 = 6,
+    D8 = 8,
+    D10 = 10,
+    D12 = 12,
+    D20 = 20,
+    D100 = 100
+}
 /**
  * Dice Roller
  */
-//% color="#ad4800" icon="\u2684" block="Dice"
+//%color="#ad4800" icon="\u2684" block="Dice" weight=42
 namespace RollingDice {
     /** Rolls a D6
      * @param Times
@@ -32,12 +27,16 @@ namespace RollingDice {
     }
     /**
      * Read named setting as a number.
-     * @param Timmi   The times to roll
+     * @param Times   The times to roll
      */
     //% blockId=wowie2
-    //% block="Roll a D6 $Timmi with style..."
+    //% block="Roll a D6 $Times with a $Sides"
     //% weight=90 group="Custom"
-    export function RollWithStyle(Timmi: number) {
-        return RollingDice.RollD6(Timmi);
+    export function RollWithStyle(Times: number, Sides: Dice): number {
+        let Sum = 0
+        for (let index = 0; index < Times; index++) {
+            Sum = Sum + Math.randomRange(1, Sides)
+        }
+        return (Sum)
     }
 }
