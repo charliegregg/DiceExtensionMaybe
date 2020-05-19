@@ -32,11 +32,10 @@ namespace RollingDice {
     }
     /**
      * Read named setting as a number.
-     * 
-     * @param name   The name of the setting to read
+     * @param Timmi   The times to roll
      */
     //% blockId=wowie2
-    //% block="Roll a D6 $name Times with style..."
+    //% block="Roll a D6 $Timmi with style..."
     //% weight=90 group="Custom"
     export function readNumber(Timmi: number) {
         return RollingDice.RollD6(Timmi);
