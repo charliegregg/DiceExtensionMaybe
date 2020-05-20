@@ -68,14 +68,14 @@ namespace DiceRolling {
         return (Sum2)
     }
 }
-//% color="#2ecf3b" icon="\u03C0" block="Pi Man"
+//% color="#2e7f3b" icon="\u03C0" block="Pi Man"
 //% weight=19
 namespace PiMan {
     /** Makes a Piman
      * @param Sprite    The sprite to use
      */
     //% blockId=createpiman block="Create a Pi Man using sprite %sprite"
-    //% group="Create" weight=100
+    //% group="Create" weight=90
     export function MakeAPiman(sprite: Sprite) {
         sprite.setImage(img`
             . . . . . . . . . . . . . . . .
@@ -100,7 +100,7 @@ namespace PiMan {
      * Move a Pi Man
      * @param sprite    The sprite to use
      */
-    //% blockId=MovePiMan block="Move the Pi Man %sprite with the controller" weight=90 group="Controller"
+    //% blockId=MovePiMan block="Move the Pi Man %sprite with the controller" weight=100 group="Controller"
     export function MovePiman(sprite: Sprite) {
         controller.moveSprite(sprite)
     }
