@@ -27,8 +27,8 @@ enum TropicalFruit {
     //% block=coconut
     Coconut = 2
 }
-// % color="#ad4800" icon="\u2684" block="Dice"
-// weight=42
+//% color="#ad4800" icon="\u2684" block="Dice"
+//% weight=42
 namespace DiceRolling {
     /** Rolls a D6
      * @param Times    The times to roll
