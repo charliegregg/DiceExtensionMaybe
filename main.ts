@@ -32,21 +32,21 @@ namespace DiceRolling {
     /** Rolls a D6
      * @param Times    The times to roll
      */
-    //% blockId=wowie block="Roll a D6 $Times times"
+    //% blockId=wowie block="Roll a D6 %Times times"
     //% group="Preset" weight=91
     export function RollaD6(Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
             Sum = Sum + Math.randomRange(1, 6)
         }
-        return(Sum)
+        return (Sum)
     }
     /**
      * Roll a custom die.
      * @param Times   The times to roll
      * @param Sides . The Sides of a dice
      */
-    //% blockId=wowie2 block="Roll a $Dice $Times times" weight=90 group="Custom"
+    //% blockId=wowie2 block="Roll a %Sides %Times times" weight=90 group="Custom"
     export function RollCustom(Times: number, Sides: Dice): number {
         let Sum2 = 0
         for (let index2 = 0; index2 < Times; index2++) {
