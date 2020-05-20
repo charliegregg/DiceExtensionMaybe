@@ -20,7 +20,7 @@ enum Dice {
     D100 = 100
 }
 //% color="#ad4800" icon="\u2684" block="Dice" 
-//% weight=42
+//% weight=21
 namespace DiceRolling {
     /** Rolls a D6
      * @param Times    The times to roll
@@ -49,7 +49,7 @@ namespace DiceRolling {
     }
 }
 //% color="#2eef3b" icon="\u03C0" block="Pi Man"
-//% weight=42
+//% weight=19
 namespace PiMan {
     /** Makes a Piman
      * @param Sprite    The sprite to use
