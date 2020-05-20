@@ -19,7 +19,7 @@ enum Dice {
     //% block=D100
     D100 = 100
 }
-//% color="#ad4800" icon="\u2684" block="Dice"
+//% color="#ad4800" icon="\u2684" block="Dice" 
 //% weight=42
 namespace DiceRolling {
     /** Rolls a D6
@@ -37,7 +37,7 @@ namespace DiceRolling {
     /**
      * Roll a custom die.
      * @param Times   The times to roll
-     * @param Sides . The Sides of a dice
+     * @param Sides   The Sides of a dice
      */
     //% blockId=wowie2 block="Roll a %Sides %Times times" weight=90 group="Custom"
     export function RollCustom(Sides: Dice, Times: number): number {
@@ -77,17 +77,12 @@ namespace PiMan {
         `)
     }
     /**
-     * Roll a custom die.
-     * @param Times   The times to roll
-     * @param Sides . The Sides of a dice
+     * Move a Pi Man
+     * @param sprite    The sprite to use
      */
-    //% blockId=wowie2 block="Roll a %Sides %Times times" weight=90 group="Custom"
-    export function RollCustom(Sides: Dice, Times: number): number {
-        let Sum22 = 0
-        for (let index22 = 0; index22 < Times; index22++) {
-            Sum22 = Sum22 + Math.randomRange(1, Sides)
-        }
-        return (Sum22)
+    //% blockId=wowie2 block="Move the Pi Man %sprite with the controller" weight=90 group="Custom"
+    export function MovePiman(sprite: Sprite) {
+        controller.moveSprite(sprite)
     }
 }
 game.splash(convertToText(DiceRolling.RollCustom(0, Dice.D2)))
