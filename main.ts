@@ -19,8 +19,8 @@ enum Dice {
     //% block=D100
     D100 = 100
 }
-// % color="#ad4800" icon="\u2684" block="Dice" %
-// weight=21
+//% color="#ad4800" icon="\u2684" block="Dice" 
+//% weight=21
 namespace DiceRolling {
     /** Rolls a D6
      * @param Times    The times to roll
@@ -48,8 +48,8 @@ namespace DiceRolling {
         return (Sum2)
     }
 }
-// % color="#2eef3b" icon="\u03C0" block="Pi Man" %
-// weight=19
+//% color="#2eef3b" icon="\u03C0" block="Pi Man"
+//% weight=19
 namespace PiMan {
     /** Makes a Piman
      * @param Sprite    The sprite to use
@@ -80,7 +80,7 @@ namespace PiMan {
      * Move a Pi Man
      * @param sprite    The sprite to use
      */
-    //% blockId=MovePiman block="Move the Pi Man %sprite with the controller" weight=90 group="Controller"
+    //% blockId=MovePiMan block="Move the Pi Man %sprite with the controller" weight=90 group="Controller"
     export function MovePiman(sprite: Sprite) {
         controller.moveSprite(sprite)
     }
