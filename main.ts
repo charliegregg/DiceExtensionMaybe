@@ -1,6 +1,26 @@
 /**
  * Dice Roller
  */
+let Pimannn = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+`, SpriteKind.Player)
+PiMan.MakeAPiman(Pimannn)
+PiMan.MovePiman(Pimannn)
 enum Dice {
     //% block=D2
     D2 = 2,
@@ -48,7 +68,7 @@ namespace DiceRolling {
         return (Sum2)
     }
 }
-//% color="#2eef3b" icon="\u03C0" block="Pi Man"
+//% color="#2ecf3b" icon="\u03C0" block="Pi Man"
 //% weight=19
 namespace PiMan {
     /** Makes a Piman
