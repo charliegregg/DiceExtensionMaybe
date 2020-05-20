@@ -80,7 +80,7 @@ namespace PiMan {
      * Move a Pi Man
      * @param sprite    The sprite to use
      */
-    //% blockId=wowie2 block="Move the Pi Man %sprite with the controller" weight=90 group="Custom"
+    //% blockId=wowie2 block="Move the Pi Man %sprite with the controller" weight=90 group="Controller"
     export function MovePiman(sprite: Sprite) {
         controller.moveSprite(sprite)
     }
