@@ -19,14 +19,6 @@ enum Dice {
     //% block=D100
     D100 = 100
 }
-enum TropicalFruit {
-    //% block=banana
-    Banana = 0,
-    //% block=pineapple
-    Pinapple = 1,
-    //% block=coconut
-    Coconut = 2
-}
 //% color="#ad4800" icon="\u2684" block="Dice"
 //% weight=42
 namespace DiceRolling {
@@ -54,6 +46,48 @@ namespace DiceRolling {
             Sum2 = Sum2 + Math.randomRange(1, Sides)
         }
         return (Sum2)
+    }
+}
+//% color="#2eef3b" icon="\u03C0" block="Pi Man"
+//% weight=42
+namespace PiMan {
+    /** Makes a Piman
+     * @param Sprite    The sprite to use
+     */
+    //% blockId=createpiman block="Create a Pi Man using sprite %sprite"
+    //% group="Create" weight=100
+    export function MakeAPiman(sprite: Sprite) {
+        sprite.setImage(img`
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . 1 f . .
+            . . . 4 4 4 4 4 4 4 4 4 4 4 4 .
+            . . 4 4 4 4 4 4 4 4 4 4 4 4 2 .
+            . 4 4 4 . 4 4 . . . . 4 4 . . .
+            . 4 4 . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . . 4 4 . . . . 4 4 . . .
+            . . . . 4 4 4 . . . . 4 4 4 . .
+            . . . . 4 4 . . . . . . 4 4 . .
+            . . . . . . . . . . . . . . . .
+        `)
+    }
+    /**
+     * Roll a custom die.
+     * @param Times   The times to roll
+     * @param Sides . The Sides of a dice
+     */
+    //% blockId=wowie2 block="Roll a %Sides %Times times" weight=90 group="Custom"
+    export function RollCustom(Sides: Dice, Times: number): number {
+        let Sum22 = 0
+        for (let index22 = 0; index22 < Times; index22++) {
+            Sum22 = Sum22 + Math.randomRange(1, Sides)
+        }
+        return (Sum22)
     }
 }
 game.splash(convertToText(DiceRolling.RollCustom(0, Dice.D2)))
